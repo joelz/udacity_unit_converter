@@ -1,28 +1,25 @@
-# Include Real-Time Units!
+# Add Error Handling UI!
 
 ## Goals
-- Incorporate real-time unit conversions, provided by an API.
+- Show error UI when the API can't be reached.
 
 ## Steps
- 1. Play around with the API at `flutter.udacity.com`, with some query parameters for `from`, `to`, and `amount`.
- 2. Fill out the TODOs in `api.dart`, `category_route.dart` and `unit_converter.dart` using the specs below.
+ 1. Fill out the TODOs in `unit_converter.dart`,`category_route.dart`, and `category_tile.dart` using the specs below.
+ 2. It's time to celebrate, because you're done.
 
 ## Specs
- - Our Api class should expose two functions: getUnits() and convert().
- - getUnits() retrieves a list of units for a given Category. Our only Category that uses an API is Currency, i.e. `flutter.udacity.com/currency`. This is used in CategoryRoute to load a list of Categories.
- - convert() takes in a `from` Unit, a `to` Unit, and a numerical `amount` to convert. An example is `https://flutter.udacity.com/currency/convert?from=US Dollar&to=Gold Bar&amount=500.0`. This is used in UnitConverter to convert Currency values.
- - On any errors, exceptions, or nulls, print a message and return `null`.
+ - When the device is not connected to the internet (e.g. if using an emulator, turn off the Wi-Fi), and the user is viewing the Currency UnitConverter, show an error UI when they type in a number.
+ - Even though the unit converter doesn't work for the Currency category when there is no Wi-Fi, it should still work for the other Categories.
+ - When the device is not connected to the internet and the user is in the Category list view, tapping on the Currency CategoryTile should not take them to the UnitConverter.
 
 ## Customizations
- - Feel free to point to a real Currency API, or to any other API.
- - Include more descriptive error messages.
+ - Customize the error UI.
+ - Add error UI for other error cases. For instance, tapping on the CategoryTile can show an error message or error UI. Or, it can show some disabled UI (e.g. grey text).
 
 ## Screenshots
 
 ### Start
-<img src='../../screenshots/11_api.png' width='350'>
+<img src='../../screenshots/12_error.png' width='350'>
 
 ### Solution
-<img src='../../screenshots/11_api_2.png' width='350'><img src='../../screenshots/11_api_3.png' width='350'>
-<img src='../../screenshots/11_api_4.gif' width='350'>
-
+<img src='../../screenshots/12_error_2.png' width='350'><img src='../../screenshots/12_error_3.png' width='350'>
