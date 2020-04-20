@@ -1,30 +1,33 @@
-# Code a Custom Category Widget!
+# Create the Category Screen!
 
 ## Goals
- - Using the existing Flutter widgets, build a custom Category widget.
- - Customize the widget to your liking.
+ - Create the home screen of the app.
+ - Create a ListView for the Categories.
 
 ## Steps
- 1. Fill out the TODOs in `category.dart` and `main.dart` using the specs below.
- 2. Customize your Category widget if desired. Some ideas are listed below.
+ 1. Fill out the TODOs in `main.dart` and `category_route.dart` using the specs below.
+ 2. If you had customized your `category.dart`, you can replace our `category.dart` with yours.
+ 2. Customize your app if desired. Some ideas are listed below.
 
 ## Specs
- - The icon, color, and text should be passed into the Category widget upon instantiation. They should be required.
- - Height of the Category widget is 100.0. Its padding is 8.0.
- - The widget's border radius is half of the Category height (in this case, 50.0). You can define both the height and the border radius as constants.
- - Icon size is 60.0. The padding around the icon is 16.0.
- - Text size is 24.0.
- - The InkWell will not animate if the onTap function is null. Use a print statement for now, as a placeholder. i.e. ```onTap: () { print('I was tapped!'); }```.
- - The InkWell's splash and highlight colors should be the color we pass in.
+ - The AppBar text should say 'Unit Converter' with a font size of 30.0, and an elevation of 0.0.
+ - A list of 8 Categories should be shown on the screen. You should be able to scroll down the list. There should be 8.0 horizontal padding around this list.
+ - The AppBar and app body should be the same color. In our example, we use `Colors.green[100]`.
 
 ## Customizations
- - You can choose what icon, text, and color(s) to use.
- - You can customize the border radius.
+ - Whether to center the AppBar title.
+ - App's background color.
+ - InkWell color for each Category.
+ - Padding size.
 
 ## Screenshots
 
 ### Start
-<img src='../../screenshots/02_category_widget.png' width='350'>
+<img src='../../screenshots/03_category_route.png' width='350'>
+
+After the `main.dart` TODOs are complete:
+
+<img src='../../screenshots/03_category_route_2.png' width='350'>
 
 ### Solution
-<img src='../../screenshots/02_category_widget_2.png' width='350'><img src='../../screenshots/02_category_widget_3.gif' width='350'>
+<img src='../../screenshots/03_category_route_3.png' width='350'><img src='../../screenshots/03_category_route_4.gif' width='350'>
