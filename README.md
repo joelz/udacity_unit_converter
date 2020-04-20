@@ -1,29 +1,23 @@
-# Add Responsive Design!
+# Add Real Units!
 
 ## Goals
-- Remove RenderFlex exceptions.
-- Ensure the app is usable in both portrait and landscape mode, and for devices of different sizes.
+- Use real unit conversions, provided by a JSON file asset.
 
 ## Steps
- 1. Fill out the TODOs in `category_route.dart` and `unit_converter.dart` using the specs below.
+ 1. Take a look at the way each Category's units are set up in `assets/data`.
+ 2. Fill out the TODOs in `pubspec.yaml` and `category_route.dart` using the specs below.
 
 ## Specs
- - Using MediaQuery, display a GridView for the list of Categories in CategoryRoute. The GridView should have two items per row and have an aspect ratio of 3.0.
- - Use a ListView instead of a Column to draw your UnitConverter. This ensures that your converter is viewable on all screens, and is scrollable when the screen is too small to fit it all. This also removes the RenderFlex exception while the front panel of the Backdrop is being opened and closed (alternatively, you could use a SingleChildScrollView).
- - Using OrientationBuilder, display the unit converter at 450.0 width, centered, in landscape mode. Display it at full size in portrait mode.
- - When you switch from portrait to landscape mode, if a user already has entered a value, it should remain in the input TextField.
+ - The unit converter should now pull in units for each Category from a JSON file in the `assets/data` directory.
 
 ## Customizations
- - If you want your landscape view to not require as much scrolling, you can reorganize the input and output groups into a "Row"-style ListView that scrolls horizontally instead of vertically.
+ - You can choose to use the regular or goofy units.
+ - You can use Streams to retrieve the JSON data. We use the JsonDecoder.
 
 ## Screenshots
 
 ### Start
-<img src='../../screenshots/08_responsive.png' width='350'><img src='../../screenshots/08_responsive_2.png' width='700'>
-<img src='../../screenshots/08_responsive_3.png' width='350'><img src='../../screenshots/08_responsive_4.png' width='700'>
+<img src='../../screenshots/09_units.png' width='350'>
 
 ### Solution
-<img src='../../screenshots/08_responsive_5.png' width='350'><img src='../../screenshots/08_responsive_6.png' width='700'>
-<img src='../../screenshots/08_responsive_7.png' width='350'><img src='../../screenshots/08_responsive_8.png' width='700'>
-
-
+<img src='../../screenshots/09_units_2.png' width='350'>
