@@ -1,33 +1,23 @@
-# Create the Category Screen!
+# Add Navigation!
 
 ## Goals
- - Create the home screen of the app.
- - Create a ListView for the Categories.
+ - Create a unit converter screen. Currently, this screen just displays some mock units (which we've generated for you in `category_route.dart`, using the Unit class in `unit.dart`).
+ - Navigate to a Category-specific route, when you tap on a Category. This route takes you to the unit converter screen.
 
 ## Steps
- 1. Fill out the TODOs in `main.dart` and `category_route.dart` using the specs below.
- 2. If you had customized your `category.dart`, you can replace our `category.dart` with yours.
- 2. Customize your app if desired. Some ideas are listed below.
+ 1. Fill out the TODOs in `category.dart` and `converter_route.dart` using the specs below.
+ 2. Customize your app if desired.
 
 ## Specs
- - The AppBar text should say 'Unit Converter' with a font size of 30.0, and an elevation of 0.0.
- - A list of 8 Categories should be shown on the screen. You should be able to scroll down the list. There should be 8.0 horizontal padding around this list.
- - The AppBar and app body should be the same color. In our example, we use `Colors.green[100]`.
-
-## Customizations
- - Whether to center the AppBar title.
- - App's background color.
- - InkWell color for each Category.
- - Padding size.
+ - The ConverterRoute should also have an AppBar, the same color as the Category widget that was tapped.
+ - The Title of the AppBar should be the name of the Category.
+ - Pass the name, color, and units to the ConverterRoute.
+ - The background color of each unit should be the same as the ConverterRoute's AppBar color.
 
 ## Screenshots
 
 ### Start
-<img src='../../screenshots/03_category_route.png' width='350'>
-
-After the `main.dart` TODOs are complete:
-
-<img src='../../screenshots/03_category_route_2.png' width='350'>
+<img src='../../screenshots/04_navigation.png' width='350'>
 
 ### Solution
-<img src='../../screenshots/03_category_route_3.png' width='350'><img src='../../screenshots/03_category_route_4.gif' width='350'>
+<img src='../../screenshots/04_navigation_2.png' width='350'><img src='../../screenshots/04_navigation_3.gif' width='350'>
