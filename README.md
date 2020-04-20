@@ -1,34 +1,31 @@
-# Add User Input!
+# Use a Backdrop!
 
 ## Goals
-- Add user input so that a user can convert an amount from one unit to another.
+- Use a Backdrop widget to make navigation feel smoother.
 
 ## Steps
- 1. Fill out the TODOs in `converter_route.dart` using the specs below.
- 2. Use the helper function provided to aid in the conversions. You'll likely have to add more. Remember to set the state!
- 3. Update the Theme in `main.dart`, and the colors in `category.dart`.
+ 1. Take a look at the provided Backdrop widget. You should pass in the objects and widgets needed in its constructor. Note that we've renamed the ConverterRoute to UnitConverter, since we do not use a Navigator and routes, when using a Backdrop. For Category, we've also separated the logic between the data and the UI widget itself, into Category, and CategoryTile. The UnitConverter now takes in a Category in its constructor rather than a name, color, and icon.
+ 2. Fill out the TODOs in `category_route.dart`. Specifically, you'll be using the provided Backdrop widget.
+ 3. Fill out the TODO in `category_tile.dart`. You'll remove the Navigator code since the Backdrop is now responsible for showing and hiding the unit conversion view. The CategoryTile widget takes in an onTap function, and you should use it to bring up the unit conversion view.
+ 4. Note that with the Backdrop, the units never change in the Dropdowns, when you switch Categories. This is because the DropdownMenuItems are only being set in initState(), which is only being called once per app start. You'll want to also set the DropdownMenuItems, and the defaults, each time the user switches Categories. Resolve this within `unit_converter.dart`.
+ 5. You may see some black and yellow overflow lines, accompanied by a message regarding RenderFlex. This is fine, as we'll resolve this in the next coding exercise.
 
 ## Specs
- - The 'input' group is composed of a TextField and a Dropdown for the 'From' unit. This group has a Padding of 16.0.
- - Users should only be able to enter numbers.
- - The input TextField should be styled with its label in the border (see screenshot). Hint: Use the OutlineInputBorder widget.
- - An error style with error text should show up when invalid values are entered.
- - The 'output' group is composed of an output Text with the conversion result, and a dropdown for the 'To' unit. It likewise has an overall Padding of 16.0.
- - The output text should also be wrapped inside a border.
- - Dropdowns have a vertical 8.0 Padding.
- - Add a 'Compare Arrows' icon between the dropdowns. This is the Material Icon named 'compare arrows'. The arrows are sized 40.0.
- - The entire user input section is wrapped in 16.0 Padding.
- - A Category's highlight and splash colors should be retrieved from its ColorSwatch.
- - Set the ThemeData's textTheme to have a body color of black, and a display color of Colors.grey[600].
- - The ThemeData's primaryColor should be Colors.grey[500].
+ - The default Category is 'Length'; when you open the app, the unit converter for 'Length' will already be showing.
+ - The front panel should show the unit converter for the currently-selected Category. While the front panel is up, the text at the top of the app (title) should say 'Unit Converter'.
+ - Tapping on the 'menu' icon in the top left corner should bring you to the list of Categories. When in this list, the text at the top of the app (title) should say 'Select a Category'.
+ - The back panel color depends on the color from the Category.
+ - The bottom padding for the back panel should be 48.0, to give it space for the bottom tab.
+ - If a user types in an input value, the value should not be cleared when the user closes and re-opens the front panel.
 
 ## Customizations
- - Style the input/output boxes and dropdowns. Consider colors, border radius, padding, text themes, etc.
+- Feel free to dig through the Backdrop widget code.
+- Change the colors and theme.
 
 ## Screenshots
 
 ### Start
-<img src='../../screenshots/06_input.png' width='350'>
+<img src='../../screenshots/07_backdrop.png' width='350'><img src='../../screenshots/07_backdrop_2.png' width='350'><img src='../../screenshots/07_backdrop_3.gif' width='350'>
 
 ### Solution
-<img src='../../screenshots/06_input_2.png' width='350'><img src='../../screenshots/06_input_3.png' width='350'>
+<img src='../../screenshots/07_backdrop_4.png' width='350'><img src='../../screenshots/07_backdrop_5.png' width='350'><img src='../../screenshots/07_backdrop_6.gif' width='350'>
