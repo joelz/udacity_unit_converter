@@ -1,21 +1,30 @@
-# Build a Hello Rectangle App
+# Code a Custom Category Widget!
 
 ## Goals
- - Verify you've set up Android Studio.
- - Verify that the Flutter plugin has been installed.
- - Run an app!
+ - Using the existing Flutter widgets, build a custom Category widget.
+ - Customize the widget to your liking.
 
 ## Steps
- 1. Create an app. You can do this using `flutter create hello_rectangle` from the command line, or by going to File -> New -> New Flutter Project.
- 2. Delete the contents of your app's `lib/main.dart`.
- 3. Paste in the code from [lib/main.dart](lib/main.dart) into your app's `lib/main.dart`.
- 4. Open your device or emulator, and build and launch the app. You can do all this using the green Play button in Android Studio. From the command line, you can also do `flutter run` inside your app's project directory.
+ 1. Fill out the TODOs in `category.dart` and `main.dart` using the specs below.
+ 2. Customize your Category widget if desired. Some ideas are listed below.
 
 ## Specs
- - App has a title.
- - App Bar has a title.
- - Colored rectangle is centered in the app.
- - Text is centered in the Container widget, and center-aligned.
+ - The icon, color, and text should be passed into the Category widget upon instantiation. They should be required.
+ - Height of the Category widget is 100.0. Its padding is 8.0.
+ - The widget's border radius is half of the Category height (in this case, 50.0). You can define both the height and the border radius as constants.
+ - Icon size is 60.0. The padding around the icon is 16.0.
+ - Text size is 24.0.
+ - The InkWell will not animate if the onTap function is null. Use a print statement for now, as a placeholder. i.e. ```onTap: () { print('I was tapped!'); }```.
+ - The InkWell's splash and highlight colors should be the color we pass in.
+
+## Customizations
+ - You can choose what icon, text, and color(s) to use.
+ - You can customize the border radius.
 
 ## Screenshots
-<img src='../../screenshots/01_hello_rectangle.png' width='350'><img src='../../screenshots/01_hello_rectangle_2.png' width='350'>
+
+### Start
+<img src='../../screenshots/02_category_widget.png' width='350'>
+
+### Solution
+<img src='../../screenshots/02_category_widget_2.png' width='350'><img src='../../screenshots/02_category_widget_3.gif' width='350'>

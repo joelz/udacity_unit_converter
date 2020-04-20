@@ -4,8 +4,10 @@
 .vscode/
 .packages
 .pub/
+.dart_tool/
 build/
 ios/.generated/
 packages
 pubspec.lock
 .flutter-plugins
+.dart_tool/package_config.json
